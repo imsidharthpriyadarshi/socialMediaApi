@@ -17,10 +17,8 @@ depends_on = None
 
 
 def upgrade():
-    op.add_column('posts',sa.Column('content', sa.String(),nullable = False))
     pass
 
 
 def downgrade():
-    op.drop_column('posts','content')
     pass
