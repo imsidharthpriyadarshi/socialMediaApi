@@ -23,3 +23,7 @@ app.include_router(file.router)
 
 
 app.mount("/photos",StaticFiles(directory="photos"),name="photos")
+
+@app.get("/")
+def sayHello():
+    return {"data": "hello deployed successfully"}
