@@ -25,12 +25,14 @@ class PostBase(BaseModel):
     title : str
     content: str
     published : bool =True
+    image_path: Optional[str] = None
     
  
 class Post(PostBase):
     id: int
     created_at:datetime
     owner_id:int
+    image_path:Optional[str] = None
     owner :ResponseOnUserCreate
     
     class Config:
